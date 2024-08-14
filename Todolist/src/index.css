@@ -2,4 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Puedes agregar estilos personalizados aquí si es necesario, pero asegúrate de que no sobrescriban los estilos de Tailwind */
+/* Estilos personalizados */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #4a5568;
+}
+
+input,
+button {
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
