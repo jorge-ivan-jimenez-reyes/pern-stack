@@ -28,12 +28,12 @@ const InputTodo: React.FC = () => {
       <form className="flex mt-5" onSubmit={onSubmitForm}>
         <input
           type="text"
-          className="flex-grow p-2 border border-gray-300 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-grow p-4 border border-gray-600 bg-darkGray text-white rounded-l focus:outline-none focus:ring-2 focus:ring-neonBlue"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           placeholder="Enter a todo"
         />
-        <button className="bg-green-500 text-white px-4 py-2 rounded-r hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">
+        <button className="bg-neonBlue text-black px-6 py-2 rounded-r hover:bg-darkBlue hover:text-white focus:outline-none focus:ring-2 focus:ring-neonBlue">
           Add
         </button>
       </form>

@@ -36,7 +36,7 @@ const EditTodo: React.FC<EditTodoProps> = ({ todo }) => {
     <Fragment>
       <button
         type="button"
-        className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600"
+        className="bg-yellow-500 text-black px-3 py-1 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
         data-bs-toggle="modal"
         data-bs-target={`#id${todo.todo_id}`}
       >
@@ -44,22 +44,22 @@ const EditTodo: React.FC<EditTodoProps> = ({ todo }) => {
       </button>
 
       <div
-        className="modal fade"
+        className="modal fade text-black"
         id={`id${todo.todo_id}`}
         tabIndex={-1}
         aria-labelledby={`modalLabel${todo.todo_id}`}
         aria-hidden="true"
         onClick={() => setDescription(todo.description)}
       >
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
+        <div className="modal-dialog modal-dialog-centered max-w-sm">
+          <div className="modal-content bg-darkGray text-white">
             <div className="modal-header">
               <h5 className="modal-title" id={`modalLabel${todo.todo_id}`}>
                 Edit Todo
               </h5>
               <button
                 type="button"
-                className="btn-close"
+                className="btn-close bg-white text-black p-1 rounded-full"
                 data-bs-dismiss="modal"
                 aria-label="Close"
                 onClick={() => setDescription(todo.description)}
@@ -68,15 +68,15 @@ const EditTodo: React.FC<EditTodoProps> = ({ todo }) => {
             <div className="modal-body">
               <input
                 type="text"
-                className="form-control"
+                className="w-full p-2 border border-gray-600 rounded bg-darkGray text-white focus:outline-none focus:ring-2 focus:ring-neonBlue"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
             </div>
-            <div className="modal-footer">
+            <div className="modal-footer flex justify-between">
               <button
                 type="button"
-                className="btn btn-secondary"
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400"
                 data-bs-dismiss="modal"
                 onClick={() => setDescription(todo.description)}
               >
@@ -84,11 +84,11 @@ const EditTodo: React.FC<EditTodoProps> = ({ todo }) => {
               </button>
               <button
                 type="button"
-                className="btn btn-primary"
+                className="bg-neonBlue text-black px-4 py-2 rounded hover:bg-darkBlue hover:text-white focus:outline-none focus:ring-2 focus:ring-neonBlue"
                 onClick={updateDescription}
                 data-bs-dismiss="modal"
               >
-                Save changes
+                Save
               </button>
             </div>
           </div>

@@ -45,24 +45,24 @@ const ListTodos: React.FC = () => {
 
   return (
     <Fragment>
-      <table className="min-w-full bg-white shadow-md rounded-lg mt-5">
-        <thead className="bg-gray-200">
+      <table className="min-w-full bg-darkGray shadow-md rounded-lg mt-5 text-white">
+        <thead className="bg-black">
           <tr>
-            <th className="py-2 px-4 border-b-2 border-gray-300">Description</th>
-            <th className="py-2 px-4 border-b-2 border-gray-300">Edit</th>
-            <th className="py-2 px-4 border-b-2 border-gray-300">Delete</th>
+            <th className="py-2 px-4 border-b-2 border-gray-700">Description</th>
+            <th className="py-2 px-4 border-b-2 border-gray-700">Edit</th>
+            <th className="py-2 px-4 border-b-2 border-gray-700">Delete</th>
           </tr>
         </thead>
         <tbody>
           {todos.map((todo) => (
             <tr key={todo.todo_id}>
-              <td className="py-2 px-4 border-b">{todo.description}</td>
-              <td className="py-2 px-4 border-b">
+              <td className="py-2 px-4 border-b border-gray-700">{todo.description}</td>
+              <td className="py-2 px-4 border-b border-gray-700">
                 <EditTodo todo={todo} />
               </td>
-              <td className="py-2 px-4 border-b">
+              <td className="py-2 px-4 border-b border-gray-700">
                 <button
-                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 focus:outline-none"
                   onClick={() => deleteTodo(todo.todo_id)}
                 >
                   Delete

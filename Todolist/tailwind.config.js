@@ -5,13 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Aquí puedes extender el tema de Tailwind con tus propios estilos, colores, tipografías, etc.
       colors: {
-        primary: '#1E40AF',
-        secondary: '#E11D48',
+        darkBlue: '#1E3A8A',   // Azul oscuro
+        black: '#000000',       // Negro puro
+        neonBlue: '#3B82F6',    // Azul neón para contrastes
+        darkGray: '#1F2937',    // Gris oscuro para fondos secundarios
+        lightGray: '#D1D5DB',   // Gris claro para bordes y textos secundarios
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],  // Fuente moderna y llamativa
       },
     },
   },
